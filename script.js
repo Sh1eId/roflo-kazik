@@ -94,7 +94,7 @@ function rollAll() {
 		.then((deltas) => {
 			// Обновляем индексы по всем рулетам
 			deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta)%num_icons);
-			debugEl.textContent = ('');
+			debugEl.textContent = (' ');
 		
 			// Условия выигрыша
 			if (indexes[0] === indexes[1] && indexes[1] === indexes[2] && indexes[2]){
