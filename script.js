@@ -9,18 +9,16 @@ button.addEventListener('click', function() {
 
 // Инициализация переменных
 const debugEl = document.getElementById('debug'),
-			// Сопоставление индексов с иконками
-			iconMap = ["podval", "roflan", "jaba", "barny", "1win", "adun", "FBI_roflan", "rice"],
 			// Width of the icons
-			icon_width = 79,	
+			icon_width = 237,	
 			// Высота одной иконки
-			icon_height = 79,	
+			icon_height = 237,	
 			// Количество иконок
 			num_icons = 8,	
 			// Максимальная скорость в мс для анимации одного значка вниз
 			time_per_icon = 100,
 			// Содержит индексы значков
-			indexes = [0, 0, 0, 0, 0];
+			indexes = [0, 0, 0];
 
 
 /** 
@@ -96,18 +94,16 @@ function rollAll() {
 		.then((deltas) => {
 			// Обновляем индексы по всем рулетам
 			deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta)%num_icons);
-			debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
+			debugEl.textContent = (' ');
 		
 			// Условия выигрыша
-			if (indexes[0] === indexes[1] && indexes[1] === indexes[2] && indexes[2] === indexes[3] && indexes[3] === indexes[4]){
-				const winCls = indexes[0] == indexes[1] == indexes[2] == indexes[3] == indexes[4]? "win2" : "win1";
+			if (indexes[0] === indexes[1] && indexes[1] === indexes[2] && indexes[2]){
+				const winCls = indexes[0] == indexes[1] == indexes[2]? "win2" : "win1";
 				document.querySelector(".slots").classList.add(winCls);
 				setTimeout(() => document.querySelector(".slots").classList.remove(winCls), 1350)
 				var audio = new Audio('jackpot.mp3');
                                 audio.play();
 			}
 		     button.disabled = false;
-			// Можно добавить возможность запустить ещё раз
-			//setTimeout(rollAll, 3000);
 		});
 };

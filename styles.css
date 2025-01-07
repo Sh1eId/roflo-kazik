@@ -27,8 +27,8 @@ body {
 
 .slots {
   position: relative;
-  width: 400.5px;
-  height: 237px;
+  width: 720.9px;
+  height: 711px;
   display: flex;
   justify-content: space-between;
   padding: 23.7px;
@@ -84,8 +84,8 @@ body {
 }
 .slots .reel {
   position: relative;
-  width: 79px;
-  height: 237px;
+  width: 237px;
+  height: 711;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   overflow: hidden;
