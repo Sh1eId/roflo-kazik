@@ -1,16 +1,3 @@
-.debug {
-  position: fixed;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 4px;
-  background: transparent;
-  font-family: monospace;
-  -webkit-text-stroke: 0.2px #000000;
-  color: #ffffff;
-  font-size: 2rem;
-}
-
 html, body {
   height: 100%;
 }
@@ -126,13 +113,13 @@ body {
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-	position: absolute; /* Позволяет позиционировать кнопку относительно родительского элемента */
-    bottom: 20px; /* Расстояние от нижней части экрана */
-    left: 50%; /* Центрирование кнопки по горизонтали */
-    transform: translateX(-50%); /* Сдвиг кнопки влево на половину её ширины для центрирования */
-    padding: 10px 20px; /* Отступы для кнопки */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Указатель при наведении */
+	position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 10px 20px; 
+    font-size: 48px; 
+    cursor: pointer; 
 }
